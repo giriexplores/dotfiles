@@ -1,0 +1,108 @@
+
+# Top prompt layout: left + fill + right
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$cmd_duration\
+$nodejs\
+$deno\
+$bun\
+$python\
+$lua\
+$c\
+$cpp\
+$java\
+$docker_context\
+$line_break\
+$character
+"""
+
+# Fill (for the middle “.” chain)
+[fill]
+symbol = "."
+style = "bold green"
+
+# Prompt (2nd line) arrow, or whatever you want
+[character]
+success_symbol = "[ ➜](bold green)"
+error_symbol = "[ ✗](bold red)"
+
+# Command Duration
+[cmd_duration]
+min_time = 1000
+format = "[  $duration ](fg:#EBCB8B)"
+
+# Directory module
+[directory]
+style = "fg:bold Green"
+truncation_length = 2
+truncation_symbol = "󰇙/"
+read_only = "  "
+home_symbol = "󱄫 "
+format = "[$path$read_only ]($style)"
+
+# Git modules
+[git_branch]
+symbol = "  "
+style = "fg:#3399FF"
+format = '([\(on$symbol$branch\)]($style))'
+
+[git_status]
+style = "fg:#FF5252 bold"
+format = '([\[$modified$deleted$untracked$staged\]$ahead_behind]($style) )'
+modified = '[!](fg:#00BFFF)'
+deleted  = '[✘](fg:#FF5252)'
+untracked = '[?](fg:#FF9800)'
+staged = '[✔](fg:#4CAF50)'
+ahead = '[ $count](fg:#4FC3F7)'
+behind = '[ $count](fg:#FF7043)'
+
+
+[nodejs]
+symbol = "󰎙 "
+style = "fg:#339933"
+format = "[ $symbol($version) ]($style)"
+
+[deno]
+symbol = " "
+style = "fg:#444444"
+format = "[ $symbol($version) ]($style)"
+
+[bun]
+symbol = " "
+style = "fg:#FBF0DF"
+format = "[ $symbol($version) ]($style)"
+
+[python]
+symbol = " "
+style = "fg:#FFD43B"
+format = "[ $symbol($version) ]($style)"
+
+[c]
+symbol = "󰙱 "
+style = "fg:#A8B9CC"
+format = "[ $symbol($version) ]($style)"
+
+[cpp]
+symbol = " "
+style = "fg:#00599C"
+format = "[ $symbol($version) ]($style)"
+
+[docker_context]
+symbol = "󰡨 "
+style = "fg:#2496ED"
+format = "[ $symbol$context ]($style)"
+
+[lua]
+symbol = " "
+style = "fg:#000080"
+format = "[ #symbol($version) ]($style)"
+
+[java]
+symbol = " "  # Nerd Font Java icon
+style = "fg:#EA2D2E"
+format = "[ $symbol($version) ]($style)"
+
