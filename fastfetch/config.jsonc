@@ -1,0 +1,89 @@
+{
+  "$schema": "https://raw.githubusercontent.com/fastfetch-cli/fastfetch/dev/doc/json_schema.json",
+
+  "logo": {
+    "type": "small",
+    "source": "linux",
+    "padding": {
+      "top": 3,
+      "left": 2
+    }
+  },
+
+  "display": {
+    "separator": ": "
+  },
+
+  "modules": [
+    {
+      "type": "title",
+      "format": "{#yellow} {user-name}@{host-name}"
+    },
+
+    {
+      "type": "custom",
+      "format": "{#red}┌─ HARDWARE"
+    },
+    {
+      "type": "cpu",
+      "key": "{#red}│ 󰻠 CPU"
+    },
+    {
+      "type": "gpu",
+      "key": "{#red}│ 󰍛 GPU"
+    },
+    {
+      "type": "memory",
+      "key": "{#red}│  RAM",
+      "format": "{used} / {total} ({percentage})"
+    },
+    {
+      "type": "disk",
+      "key": "{#red}└ 󰋊 Disk",
+      "folders": [ "/" ]
+    },
+
+    {
+      "type": "custom",
+      "format": "{#yellow}┌─ SYSTEM"
+    },
+    {
+      "type": "os",
+      "key": "{#yellow}│ 󰕈 OS"
+    },
+    {
+      "type": "kernel",
+      "key": "{#yellow}│ 󰒔 Kernel"
+    },
+    {
+      "type": "uptime",
+      "key": "{#yellow}│ 󰅐 Uptime"
+    },
+    {
+      "type": "host",
+      "key": "{#yellow}└ 󰌢 Host"
+    },
+
+    {
+      "type": "custom",
+      "format": "{#green}┌─ DESKTOP"
+    },
+    {
+      "type": "de",
+      "key": "{#green}│ 󰧨 DE"
+    },
+    {
+      "type": "wm",
+      "key": "{#green}│ 󰖲 WM"
+    },
+    {
+      "type": "terminal",
+      "key": "{#green}│ 󰆍 Terminal"
+    },
+    {
+      "type": "shell",
+      "key": "{#green}└  Shell"
+    }
+  ]
+}
+
