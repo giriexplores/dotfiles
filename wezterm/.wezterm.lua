@@ -14,8 +14,8 @@ config.font_size = 16
 config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
 config.window_background_opacity = 0.8
-config.initial_cols = 122
-config.initial_rows = 36
+config.initial_cols = 132
+config.initial_rows = 33
 
 -- color configs
 config.colors = {
