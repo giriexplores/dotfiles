@@ -26,7 +26,20 @@ return {
 
     local sources = {
       diagnostics.checkmake,
-      formatting.prettier.with { filetypes = { 'html', 'css', 'js', 'ts', 'jsx', 'tsx', 'json', 'yaml', 'markdown' } },
+      formatting.prettier.with {
+        prefer_local = 'node_modules/.bin',
+        filetypes = {
+          'html',
+          'css',
+          'js',
+          'ts',
+          'jsx',
+          'tsx',
+          'json',
+          'yaml',
+          'markdown',
+        },
+      },
       formatting.stylua,
       formatting.shfmt.with { args = { '-i', '4' } },
       formatting.terraform_fmt,
@@ -54,4 +67,3 @@ return {
     }
   end,
 }
-
