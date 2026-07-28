@@ -22,13 +22,12 @@ $character
 
 # Fill (for the middle “.” chain)
 [fill]
-symbol = "."
-style = "bold green"
+symbol = " "
 
 # Prompt (2nd line) arrow, or whatever you want
 [character]
-success_symbol = "[ ➜](bold green)"
-error_symbol = "[ ✗](bold red)"
+success_symbol = "[ ](bold green)"
+error_symbol = "[ ](bold red)"
 
 # Command Duration
 [cmd_duration]
@@ -56,7 +55,7 @@ format = '([\[$modified$deleted$untracked$staged\]$ahead_behind]($style) )'
 modified = '[!](fg:#00BFFF)'
 deleted  = '[✘](fg:#FF5252)'
 untracked = '[?](fg:#FF9800)'
-staged = '[✔](fg:#4CAF50)'
+staged = '[🗸](fg:#4CAF50)'
 ahead = '[ $count](fg:#4FC3F7)'
 behind = '[ $count](fg:#FF7043)'
 
@@ -98,11 +97,11 @@ format = "[ $symbol$context ]($style)"
 
 [lua]
 symbol = " "
-style = "fg:#000080"
-format = "[ #symbol($version) ]($style)"
+style = "fg:#4F8EF7"
+format = "[ $symbol($version) ]($style)"
 
 [java]
-symbol = " "  # Nerd Font Java icon
+symbol = " "
 style = "fg:#EA2D2E"
 format = "[ $symbol($version) ]($style)"
 
